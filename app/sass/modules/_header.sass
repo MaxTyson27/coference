@@ -1,0 +1,45 @@
+.header
+  padding: 70px 0
+  &__container
+    max-width: 1205px
+    padding: 0 10px
+    margin-left: 100px
+  &__inner
+    display: flex
+    justify-content: space-between
+  &__contacts
+    &-link
+      display: block
+      color: $primary
+      +fz(20px, 130%)
+      text-decoration: underline
+      &:first-child
+        @extend %grap-600
+        text-decoration: none
+
+@media(max-width: '1919px')
+  .header
+    padding: 30px 0
+    &__container
+      max-width: 1220px
+      margin: 0 auto
+    &__contacts-link
+      +fz(18px, 130%)
+@media(max-width: 1219px)
+  .header__container
+    max-width: 768px
+
+@media(max-width: 767px)
+  .header
+    &__inner
+      padding-bottom: 30px
+      border-bottom: 0.5px solid #4E4E4E
+  .header__container
+    max-width: 335px
+  .logo
+    max-width: 91px
+  .header__contacts-link
+    +fz(10px, 130%)
+    background: linear-gradient(103.13deg, #717171 -10.46%, #454545 67.17%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent

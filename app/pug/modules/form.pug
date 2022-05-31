@@ -1,0 +1,23 @@
+//- https://script.google.com/macros/s/AKfycbwjkzD0qIYMH2ja5HuQmYHrxJLR1kasPaZRWC5f8L17IXdzFxZ0-FYk8PqE8GWW1AqgFw/exec
+//- AKfycbwjkzD0qIYMH2ja5HuQmYHrxJLR1kasPaZRWC5f8L17IXdzFxZ0-FYk8PqE8GWW1AqgFw
+.modal-close-bg
+.modal
+  h3.modal__title.title Регистрация
+  button.modal__close.close(type="button")
+    img(src="images/close.svg", alt="")
+  form.form#form(action="#" autocomplete='off')
+    input.form__input.input-text(type="text" name='Имя' placeholder="Имя*" required)
+    input.form__input.input-text(type="text" name='Фамилия' placeholder='Фамилия*' required)
+    input.form__input.input-text(type="text" name='Город' placeholder="Город*" required)
+    input.form__input(type="text" name='Агенство/агент' placeholder='Название агентства / частный агент*' required)
+    input.form__input.input-phone(type="tel" name='Телефон' placeholder='Телефон*' required)
+    input.form__input(type="email" name='Email' placeholder='E-mail*' required)
+    button.form__btn.modal-btn(type='submit') <span>Принять участие</span>
+    p.form__policy Отправляя свои данные, вы&nbsp;соглашаетесь <a href='https://nedvex.ru/privacy' target="_blank">с&nbsp;политикой конфиденциальности</a>
+
+.success
+  h3.success__title.title Ваша заявка отправлена
+  p.success__text Подпишитесь на&nbsp;Telegram-канал конференции и&nbsp;следите за&nbsp;новостями
+  a.success__link.modal-btn(href="https://t.me/nedvex_russia" target="_blank") <span>Telegram-канал</span>
+  button.success__close.close(type="button")
+    img(src="images/close.svg", alt="")

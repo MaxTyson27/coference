@@ -1,0 +1,219 @@
+.content
+  padding-bottom: 100px
+  &__inner
+    display: flex
+    column-gap: 140px
+  &__date
+    max-width: 617px
+    padding: 10px 27px
+    background: $online-bg
+    border-radius: 32px
+    @extend %grap-500
+    +fz(30px, 120%)
+    letter-spacing: 0.01em
+    color: $online
+    margin-bottom: 30px
+  &__title
+    +fz(64px, 120%)
+    max-width: 1015px
+    @extend %grap-300
+    @extend %primary-color
+    margin-bottom: 30px
+    &--sm
+      display: none
+      @extend %grap-300
+      @extend %primary-color
+      span
+        @extend %grap-600
+    span
+      @extend %grap-600
+  &__items
+    display: flex
+    align-items: center
+    column-gap: 77px
+    margin-bottom: 115px
+  &__item
+    display: flex
+    align-items: center
+    column-gap: 14px
+    &-text
+      @extend %primary-color
+      +fz(24px, 130%)
+  &__link
+    &-text
+      +fz(18px, 130%)
+      // @extend %primary-color
+      color: #454545
+      max-width: 563px
+      margin-bottom: 24px
+  &__button
+    padding: 0
+    border: none
+    background: $accent
+    +fz(34px, 120%)
+    @extend %grap-500
+    color: $primary
+    width: 563px
+    height: 118px
+    border-radius: 27px
+    box-shadow: 0 5px 20px 0 #4d6ddd
+    cursor: pointer
+    position: relative
+    &:hover
+      box-shadow: none
+      &::after
+        opacity: 1
+    span
+      position: relative
+      z-index: 3
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      right: 0
+      width: 100%
+      height: 100%
+      border-radius: 27px
+      background: linear-gradient(100.09deg, #A3B1FF -26.04%, #4D6DDD 95.32%)
+      box-shadow: 0 5px 20px 0 #4d6ddd
+      opacity: 0
+      transition: .4s
+  &__play
+    margin-top: 120px
+    width: 206px
+    height: 206px
+    border-radius: 50%
+    background: linear-gradient(197.73deg, #FFFFFF -25.53%, rgba(255, 255, 255, 0) 112.47%)
+    filter: drop-shadow(15px 15px 46px rgba(87, 116, 238, 0.13))
+    backdrop-filter: blur(50px)
+    +flex-center()
+    position: relative
+    &:hover
+      &::after
+        opacity: 1
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      right: 0
+      border-radius: 50%
+      background: linear-gradient(198.38deg, #FFFFFF -0.1%, rgba(255, 255, 255, 0) 290.8%)
+      filter: drop-shadow(15px 15px 46px rgba(87, 116, 238, 0.13))
+      backdrop-filter: blur(50px)
+      opacity: 0
+      transition: .4s
+    img
+      transform: translateX(8px)
+      position: relative
+      z-index: 3
+
+@media(max-width: '1919px')
+  .wrapper
+    height: 100vh
+  .container
+    max-width: 1220px
+    margin: 0 auto
+    padding: 0 10px
+  .content
+    padding-bottom: 0
+    &__inner
+      column-gap: 200px
+    &__play
+      margin-top: 90px
+    &__date
+      max-width: 430px
+      +fz(20px, 120%)
+    &__title
+      +fz(40px, 120%)
+      max-width: 630px
+    &__items
+      margin-bottom: 50px
+    &__item-text
+      +fz(20px, 130%)
+    &__button
+      width: 400px
+      height: 80px
+      border-radius: 15px
+      +fz(24px, 120%)
+      &::after
+        border-radius: 15px
+    &__link-text
+      +fz(16px, 120%)
+
+@media(max-width: 1219px)
+  .container
+    max-width: 768px
+    padding: 0 10px
+  .content
+    &__inner
+      column-gap: 30px
+    &__play
+      width: 60px
+      height: 60px
+      img
+        max-width: 15px
+        transform: translateX(2px)
+
+@media(max-width: 767px)
+  .container
+    max-width: 335px
+  .content
+
+    &__inner
+      display: block
+    &__date
+      +fz(14px, 120%)
+      padding: 4px 10px
+      max-width: 283px
+      margin-bottom: 10px
+    &__title
+      display: none
+      &--sm
+        display: block
+        +fz(22px, 120%)
+        max-width: 335px
+        margin-bottom: 15px
+    &__items
+      column-gap: 0
+      justify-content: space-between
+      padding: 15px 10px
+      background-color: #fff
+      border-radius: 14px
+    &__item
+      column-gap: 6px
+      img
+        max-width: 22px
+      &-text
+        +fz(11px, 130%)
+    &__link
+      &-text
+        +fz(10px, 130%)
+        margin-bottom: 10px
+    &__button
+      width: 100%
+      height: 70px
+      +fz(20px, 120%)
+    &__body
+      margin-bottom: 200px
+    &__play
+      margin-top: 0
+      width: 150px
+      height: 150px
+      img
+        max-width: 45px
+        transform: translateX(5px)
+
+// @media(max-width: 375px) and (max-height: 677px)
+//   .content
+//     &__body
+//       margin-bottom: 50px
+//     &__play
+//       width: 60px
+//       height: 60px
+//       img
+//         max-width: 15px
+//         transform: translateX(2px)

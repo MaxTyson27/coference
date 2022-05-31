@@ -1,0 +1,171 @@
+.modal
+  position: absolute
+  padding: 40px 60px
+  max-width: 600px
+  width: 100%
+  background: #FFFFFF
+  border-radius: 27px
+  top: 50px
+  left: 50%
+  transform: translateX(-250%) scale(.3)
+  transition: .4s
+  z-index: 5
+  opacity: 0
+  &-btn
+    +flex-center()
+    width: 100%
+    height: 70px
+    background: linear-gradient(100.09deg, #617AFF -26.04%, #4D6DDD 95.32%)
+    border-radius: 12px
+    color: $primary
+    @extend %grap-500
+    +fz(25px, 120%)
+    cursor: pointer
+    margin-bottom: 20px
+    position: relative
+    &:hover
+      &::after
+        opacity: 1
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      right: 0
+      background: linear-gradient(100.09deg, #A3B1FF -26.04%, #4D6DDD 95.32%)
+      border-radius: 12px
+      opacity: 0
+      transition: .4s
+    span
+      position: relative
+      z-index: 3
+  &-close-bg
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    z-index: 4
+    backdrop-filter: blur(20px)
+    opacity: 0
+    visibility: hidden
+    cursor: pointer
+    height: inherit
+  &__title
+    margin-bottom: 40px
+
+.success
+  position: absolute
+  padding: 40px 45px
+  height: 855px
+  max-width: 600px
+  width: 100%
+  background: #FFFFFF
+  border-radius: 27px
+  top: 50px
+  left: 50%
+  transform: translateX(-250%) scale(.3)
+  transition: .4s
+  z-index: 5
+  opacity: 0
+  visibility: hidden
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  &__title
+    margin-bottom: 50px
+  &__text
+    +fz(24px, 130%)
+    @extend %primary-color
+    margin-bottom: 30px
+.close
+  position: absolute
+  top: 40px
+  right: 50px
+  background-color: transparent
+  border: none
+  cursor: pointer
+.title
+  +fz(42px, 120%)
+  @extend %primary-color
+  @extend %grap-600
+.form
+  &__input
+    display: block
+    width: 100%
+    background: #F1F1F1
+    border-radius: 12px
+    height: 70px
+    margin-bottom: 18px
+    border: none
+    padding: 0 25px
+    +fz(18px, 130%)
+    &::placeholder
+      +fz(18px, 130%)
+      color: #B0B0B0
+  &__btn
+    border: none
+  &__policy
+    color: #B0B0B0
+    +fz(14px, 130%)
+    max-width: 293px
+    a
+      text-decoration: underline
+
+@media(max-width: 1919px)
+  .modal
+    padding: 20px 40px
+    top: 20px
+  .success
+    padding: 20px 40px
+    top: 20px
+    height: 700px
+@media(max-width: 767px)
+  .modal
+    padding: 25px 40px
+    max-width: 360px
+    &__title
+      margin-bottom: 23px
+    &-btn
+      height: 45px
+      +fz(15px, 120%)
+      border-radius: 7.30595px
+      &::after
+        border-radius: 7.30595px
+    &-close-bg
+      height: 1060px
+  .success
+    max-width: 360px
+    padding: 0 25px
+    &__text
+      margin-bottom: 17px
+      font-size: 14px
+    &__title
+      margin-bottom: 30px
+  .form
+    &__input
+      height: 45px
+      background: #F1F1F1
+      border-radius: 7.30595px
+      padding: 0 15px
+      +fz(12px, 130%)
+      margin-bottom: 10px
+      &::placeholder
+        +fz(12px, 130%)
+    &__btn
+      margin-bottom: 13px
+    &__policy
+      font-size: 9px
+      max-width: 183px
+  .title
+    +fz(25px, 120%)
+
+  .close
+    width: 26px
+    height: 26px
+    padding: 0
+    top: 23px
+    right: 30px
