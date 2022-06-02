@@ -7,7 +7,7 @@
   border-radius: 27px
   top: 50px
   left: 50%
-  transform: translateX(-250%) scale(.3)
+  transform: translate(-50%, -250%)
   transition: .4s
   z-index: 5
   opacity: 0
@@ -51,7 +51,7 @@
     opacity: 0
     visibility: hidden
     cursor: pointer
-    height: inherit
+    height: 100%
   &__title
     margin-bottom: 40px
 
@@ -65,7 +65,7 @@
   border-radius: 27px
   top: 50px
   left: 50%
-  transform: translateX(-250%) scale(.3)
+  transform: translate(-50%, -250%)
   transition: .4s
   z-index: 5
   opacity: 0
@@ -119,6 +119,12 @@
   .modal
     padding: 20px 40px
     top: 20px
+    &__title
+      margin-bottom: 30px
+  .form
+    &__input
+      height: 55px
+      margin-bottom: 15px
   .success
     padding: 20px 40px
     top: 20px
@@ -140,6 +146,7 @@
   .success
     max-width: 360px
     padding: 0 25px
+    height: 500px
     &__text
       margin-bottom: 17px
       font-size: 14px

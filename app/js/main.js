@@ -4,71 +4,14 @@ $(function () {
   })
 
   $('.input-phone').inputmask({ "mask": "+7(999) 999-99-99" });
-  // $('.content__button').on('click', (e) => {
-  //   $('.modal').css('display', 'block')
-  // })
-  // $(".form").submit(function (event) {
-  //   event.preventDefault();
 
-  //   // Ссылка, которую получили на этапе публикации приложения
-  //   let appLink = "https://script.google.com/macros/s/AKfycbwjkzD0qIYMH2ja5HuQmYHrxJLR1kasPaZRWC5f8L17IXdzFxZ0-FYk8PqE8GWW1AqgFw/exec";
-
-  //   // Id текущей формы
-  //   let form = $('#' + $(this).attr('id'))[0];
-
-  //   // Кнопка отправки формы
-  //   let submitButton = $(this).find('.form__btn');
-
-
-  //   // FormData
-  //   let fd = new FormData(form);
-
-
-  //   $.ajax({
-
-  //     url: appLink,
-  //     type: "POST",
-  //     data: fd,
-  //     processData: false,
-  //     contentType: false,
-  //     beforeSend: function () {
-
-  //       // Делаем неактивной кнопку отправки
-  //       submitButton.prop('disabled', true);
-
-  //       // валидация других полей.
-
-  //     },
-
-  //   }).done(function (res, textStatus, jqXHR) {
-
-  //     if (jqXHR.readyState === 4 && jqXHR.status === 200) {
-
-  //       console.log('success');
-
-  //       // Возвращаем активность кнопке отправки
-  //       submitButton.prop('disabled', false);
-
-  //       // Очищаем поля формы
-  //       form.reset();
-
-  //     } else {
-  //       setTimeout(() => {
-  //         submitButton.prop('disabled', false);
-  //       }, 5000);
-
-  //       $('.modal').css('opacity', 0)
-  //       $('.modal').css('transform', 'translateX(-250px) scale(.3)')
-  //       $('.modal-close-bg').css('visibility', 'hidden')
-  //       $('.modal-close-bg').css('opacity', 0)
-
-  //       console.log('Гугл не ответил статусом 200');
-  //     }
-  //   })
-  // });
 });
 
 'use strict';
+
+
+
+
 
 
 const modalFunction = () => {
@@ -98,14 +41,14 @@ const modalFunction = () => {
   }
 
   const removeModalStyles = () => {
-    modal.style.transform = `translateX(-250%) scale(.3)`
+    modal.style.transform = `translate(-50%, -250%)`
     modal.style.opacity = 0
     removeCloseBgStyles()
 
   }
 
   const removeSuccessModalStyles = () => {
-    successModal.style.transform = `translateX(-250%) scale(.3)`
+    successModal.style.transform = `translate(-50%, -250%)`
     successModal.style.visibility = 'hidden'
     successModal.opacity = 0
     removeCloseBgStyles()
@@ -131,7 +74,7 @@ const modalFunction = () => {
 
   const openModal = () => {
     button.addEventListener('click', () => {
-      modal.style.transform = `translateX(-50%) scale(1)`
+      modal.style.transform = `translate(-50%, 0%)`
       modal.style.opacity = 1
       closeBg.style.opacity = 1
       closeBg.style.visibility = 'visible'
@@ -140,9 +83,9 @@ const modalFunction = () => {
 
   $(".form").submit(function (event) {
     event.preventDefault();
-
+    // AKfycbx51yT6fOCMzZieH_vsHePaKZZX51vCLTHPp2Q5LSRkydKYquW2so48aGmsL-5qCJr8
     // Ссылка, которую получили на этапе публикации приложения
-    let appLink = "https://script.google.com/macros/s/AKfycbwjkzD0qIYMH2ja5HuQmYHrxJLR1kasPaZRWC5f8L17IXdzFxZ0-FYk8PqE8GWW1AqgFw/exec";
+    let appLink = "https://script.google.com/macros/s/AKfycbx51yT6fOCMzZieH_vsHePaKZZX51vCLTHPp2Q5LSRkydKYquW2so48aGmsL-5qCJr8/exec";
 
     // Id текущей формы
     let form = $('#' + $(this).attr('id'))[0];
@@ -178,7 +121,7 @@ const modalFunction = () => {
         removeModalStyles()
         $('.success').css('opacity', 1)
         $('.success').css('visibility', 'visible')
-        $('.success').css('transform', 'translateX(-50%) scale(1)')
+        $('.success').css('transform', 'translate(-50%, 0%)')
         $('.modal-close-bg').css('opacity', 1)
         $('.modal-close-bg').css('visibility', 'visible')
 
