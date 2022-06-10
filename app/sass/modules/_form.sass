@@ -55,6 +55,19 @@
   &__title
     margin-bottom: 40px
 
+.title
+  +fz(42px, 120%)
+  @extend %primary-color
+  @extend %grap-600
+
+.close
+  position: absolute
+  top: 40px
+  right: 50px
+  background-color: transparent
+  border: none
+  cursor: pointer
+
 .success
   position: absolute
   padding: 40px 45px
@@ -76,22 +89,16 @@
   align-items: center
   text-align: center
   &__title
+    font-size: 41px
     margin-bottom: 50px
   &__text
     +fz(24px, 130%)
     @extend %primary-color
     margin-bottom: 30px
-.close
-  position: absolute
-  top: 40px
-  right: 50px
-  background-color: transparent
-  border: none
-  cursor: pointer
-.title
-  +fz(42px, 120%)
-  @extend %primary-color
-  @extend %grap-600
+  &__close
+    top: 10px
+    right: 10px
+
 .form
   &__input
     display: block
@@ -143,6 +150,10 @@
         border-radius: 7.30595px
     &-close-bg
       height: 1060px
+
+  .title
+    +fz(25px, 120%)
+
   .success
     max-width: 360px
     padding: 0 25px
@@ -152,6 +163,7 @@
       font-size: 14px
     &__title
       margin-bottom: 30px
+      font-size: 24px
   .form
     &__input
       height: 45px
@@ -167,8 +179,6 @@
     &__policy
       font-size: 9px
       max-width: 183px
-  .title
-    +fz(25px, 120%)
 
   .close
     width: 26px

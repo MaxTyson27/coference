@@ -17,7 +17,7 @@ body {
   font-font-weight: 600;
 }
 
-.title, .success__text, .content__item-text, .content__title--sm, .content__title {
+.success__text, .title, .content__item-text, .content__title--sm, .content__title {
   background: -o-linear-gradient(346.87deg, #717171 -10.46%, #454545 67.17%);
   background: linear-gradient(103.13deg, #717171 -10.46%, #454545 67.17%);
   -webkit-background-clip: text;
@@ -587,6 +587,20 @@ body {
   margin-bottom: 40px;
 }
 
+.title {
+  font-size: 42px;
+  line-height: 120%;
+}
+
+.close {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .success {
   position: absolute;
   padding: 40px 45px;
@@ -622,6 +636,7 @@ body {
   text-align: center;
 }
 .success__title {
+  font-size: 41px;
   margin-bottom: 50px;
 }
 .success__text {
@@ -629,19 +644,9 @@ body {
   line-height: 130%;
   margin-bottom: 30px;
 }
-
-.close {
-  position: absolute;
-  top: 40px;
-  right: 50px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.title {
-  font-size: 42px;
-  line-height: 120%;
+.success__close {
+  top: 10px;
+  right: 10px;
 }
 
 .form__input {
@@ -735,6 +740,11 @@ body {
     height: 1060px;
   }
 
+  .title {
+    font-size: 25px;
+    line-height: 120%;
+  }
+
   .success {
     max-width: 360px;
     padding: 0 25px;
@@ -746,6 +756,7 @@ body {
   }
   .success__title {
     margin-bottom: 30px;
+    font-size: 24px;
   }
 
   .form__input {
@@ -783,11 +794,6 @@ body {
   .form__policy {
     font-size: 9px;
     max-width: 183px;
-  }
-
-  .title {
-    font-size: 25px;
-    line-height: 120%;
   }
 
   .close {
